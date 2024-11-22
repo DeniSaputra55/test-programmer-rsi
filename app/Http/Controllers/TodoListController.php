@@ -50,7 +50,7 @@ class TodoListController extends Controller
             'todo' => 'required|string',
             'tanggal' => 'required',
             'jam' => 'required',
-            'status'
+            'status'=> 'required',
         ]);
         try {
             // update todo here
