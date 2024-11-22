@@ -77,9 +77,9 @@ class TodoListController extends Controller
     {
         try {
             Todo::where('id', $id)->delete();
-            return redirect('/todos')->with('success', 'Todo deleted successfully');
+            return redirect('/todo')->with('success', 'Todo deleted successfully');
         } catch (\Exception $e) {
-            return redirect('/todos')->with('fail', $e->getMessage());
+            return redirect('/todo')->with('fail', $e->getMessage());
         }
     }
 

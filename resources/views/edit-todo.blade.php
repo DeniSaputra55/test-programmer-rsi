@@ -18,7 +18,7 @@
             <span class="alert alert-danger p-2">{{Session::get('fail')}}</span>
             @endif
             <div class="card-body">
-                <form action="{{ route('Edittodo')}}" method="post">
+                <form action="{{ route('EditTodo')}}" method="post">
                     @csrf
                     <input type="hidden" name="todo" id="" value="{{$todo->id}}">
                     <div class="mb-3">
@@ -37,7 +37,7 @@
                     </div>
                     <div class="mb-3">
                         <label for="formGroupExampleInput2" class="form-label">jam</label>
-                        <input type="number" name="jam" value="{{$todo->jam}}" class="form-control" id="formGroupExampleInput2" placeholder="Enter jam">
+                        <input type="time" name="jam" value="{{$todo->jam}}" class="form-control" id="formGroupExampleInput2" placeholder="Enter jam">
                         @error('jam')
                         <span class="text-danger">{{$message}}</span>
                         @enderror
